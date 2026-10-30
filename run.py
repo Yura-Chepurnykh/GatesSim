@@ -1,12 +1,12 @@
 from models.gate import Gate, OR, AND, NOT, XOR
-import cli.lexer as lex
+import cli.parse as parser
 
 def main() -> int:
-    result : lex.LexResult = lex.lex("add --type AND --x 10")
+    result : parser.LexResult = parser.parse("add --type AND --x 10")
 
     print (f"error code: {result.error_code}")
 
-    if result.error_code != lex.ErrorCode.SUCCESS:
+    if result.error_code != parser.ErrorCode.SUCCESS:
         return 1
 
     print (f"command name: {result.command_name}")

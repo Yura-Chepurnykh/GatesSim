@@ -49,3 +49,7 @@ group "AND 1" "AND 2" ... into "Group 1"
 ungroup "Group 1"
 undo 4
 redo 5
+
+По сути у меня lexer объединяет задачи самого lexer-а и парсера,
+но для моего случая это нормально, так как мы не имеем дело со 
+сложным abstract syntax tree.
