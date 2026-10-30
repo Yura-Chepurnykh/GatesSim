@@ -36,4 +36,16 @@ or = OR(1, 1, 1, 0)
 nor = NOT(or)
 nor.calc_output будет 0
 
-XD ...
+И так команды у нас будет иметь следующий вид:
+
+add --name "AND 1" --type and --x 10 --y 20 --rotation 0;
+remove --name "AND 1";
+change --dx 10 --dy 30 --delta_rotation 90;
+или
+change --name "AND 1" --x 10 --x 30 --drotation 90;
+change "AND 1" "AND 2"
+read "AND 2"
+group "AND 1" "AND 2" ... into "Group 1"
+ungroup "Group 1"
+undo 4
+redo 5
